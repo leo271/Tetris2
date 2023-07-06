@@ -96,7 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
           //
           // Column has various properties to control how it sizes itself and
           // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
+          // center the child vertically; the main axis here is the vertical
           // axis because Columns are vertical (the cross axis would be
           // horizontal).
           //
@@ -120,6 +120,20 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class BigText extends StatelessWidget {
+  const BigText({super.key, required this.text});
+
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      text,
+      style: Theme.of(context).textTheme.headlineLarge,
     );
   }
 }
